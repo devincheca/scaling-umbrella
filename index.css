@@ -1,0 +1,47 @@
+* {
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+.bg-tile-black {
+  background-color: black;
+  color: white;
+}
+.bg-tile-white {
+  height: 2in;
+}
+.bg-tile-kitchen {
+  /* TODO: gradient */
+  background-image: url("ui-ux-home-assignment/assets/bg-1.png");
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  height: 1334px;
+}
+#cutout {
+  margin-top: -3vh;
+  height: 30vh;
+  padding-right: 10vw;
+}
+#headline {
+  color: white;
+  font-size: 17px;
+  font-weight: 900;
+  margin: 5vh;
+  text-transform: uppercase;
+}
+#hero-header {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+#rico-back-button {
+  background: transparent;
+  border: 3px solid white;
+  border-radius: 5em;
+  color: white;
+  font-weight: 900;
+  margin: 4vh;
+  padding: 5px;
+  text-transform: uppercase;
+}
