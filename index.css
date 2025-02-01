@@ -1,38 +1,96 @@
+:root {
+  --cutout-height-mobile: 30vh;
+  --cutout-height-laptop: 70vh;
+}
 * {
   font-family: "Raleway", serif;
   font-optical-sizing: auto;
   font-weight: normal;
   font-style: normal;
 }
+body { margin: initial; }
 .bg-tile-black {
-  background-color: black;
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0,0,0,1)
+    3%,
+    rgba(0,0,0,1)
+  );
   color: white;
+  min-height: 40vh;
+  padding-bottom: 20vh;
+  position: relative;
+  top: -5vh;
 }
 .bg-tile-white {
   height: 2in;
 }
-.bg-tile-kitchen {
-  /* TODO: gradient */
-  background-image: url("ui-ux-home-assignment/assets/bg-1.png");
+#primary-hero {
   background-color: black;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(255, 255, 255, 0.5)),
+    url("ui-ux-home-assignment/assets/bg-1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: inset 40px 0px 40px black;
   display: flex;
   justify-content: space-around;
-  height: 1334px;
 }
 #cutout {
   margin-top: -3vh;
-  height: 30vh;
+  height: var(--cutout-height-mobile);
   padding-right: 10vw;
+}
+#gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 3vh;
+  place-items: center;
+}
+#gallery > div:hover {
+  background-image: linear-gradient(
+    to bottom left,
+    white,
+    20%,
+    black
+  );
+  border-radius: .25em;
+}
+#gallery > div > div {
+  background-color: black;
+  border-radius: .25em;
+  margin: .25em;
+}
+#gallery > div > div > img {
+  border-radius: .25em;
+  margin: .25em;
+  width: 25vw;
 }
 #headline {
   color: white;
   font-size: 17px;
   font-weight: 900;
-  margin: 5vh;
+  margin: 8vw;
   text-transform: uppercase;
 }
 #hero-header {
   font-weight: 900;
+  padding-left: 8vw;
+  text-transform: uppercase;
+}
+#hero-paragraph {
+  font-weight: 500;
+  padding: 2em;
+}
+#learn-more-button {
+  background: white;
+  border: 3px solid white;
+  border-radius: 5em;
+  color: black;
+  font-weight: 900;
+  margin: 8vw;
+  padding: 5px;
   text-transform: uppercase;
 }
 #rico-back-button {
@@ -40,8 +98,14 @@
   border: 3px solid white;
   border-radius: 5em;
   color: white;
-  font-weight: 900;
-  margin: 4vh;
+  font-weight: 500;
+  margin: 8vw;
   padding: 5px;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 920px) {
+  #cutout {
+    height: var(--cutout-height-laptop);
+  }
 }
