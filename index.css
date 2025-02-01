@@ -1,6 +1,8 @@
 :root {
   --cutout-height-mobile: 30vh;
   --cutout-height-laptop: 70vh;
+  --white: #fff;
+  --black: #000;
 }
 * {
   font-family: "Raleway", serif;
@@ -14,10 +16,10 @@ body { margin: initial; }
     to bottom,
     transparent,
     rgba(0,0,0,1)
-    3%,
+    1%,
     rgba(0,0,0,1)
   );
-  color: white;
+  color: var(--white);
   min-height: 40vh;
   padding-bottom: 20vh;
   position: relative;
@@ -26,19 +28,8 @@ body { margin: initial; }
 .bg-tile-white {
   height: 2in;
 }
-#primary-hero {
-  background-color: black;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-    rgba(255, 255, 255, 0.5)),
-    url("ui-ux-home-assignment/assets/bg-1.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  box-shadow: inset 40px 0px 40px black;
-  display: flex;
-  justify-content: space-around;
-}
 #cutout {
-  margin-top: -3vh;
+  margin-top: -70px;
   height: var(--cutout-height-mobile);
   padding-right: 10vw;
 }
@@ -51,14 +42,14 @@ body { margin: initial; }
 #gallery > div:hover {
   background-image: linear-gradient(
     to bottom left,
-    white,
+    var(--white),
     20%,
-    black
+    var(--black)
   );
   border-radius: .25em;
 }
 #gallery > div > div {
-  background-color: black;
+  background-color: var(--black);
   border-radius: .25em;
   margin: .25em;
 }
@@ -67,8 +58,8 @@ body { margin: initial; }
   margin: .25em;
   width: 25vw;
 }
-#headline {
-  color: white;
+#more-from {
+  color: var(--white);
   font-size: 17px;
   font-weight: 900;
   margin: 8vw;
@@ -84,20 +75,33 @@ body { margin: initial; }
   padding: 2em;
 }
 #learn-more-button {
-  background: white;
-  border: 3px solid white;
+  background: var(--white);
+  border: 3px solid var(--white);
   border-radius: 5em;
-  color: black;
+  color: var(--black);
   font-weight: 900;
   margin: 8vw;
   padding: 5px;
   text-transform: uppercase;
 }
+#primary-hero {
+  background-color: var(--black);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(255, 255, 255, 0.5)),
+    url("ui-ux-home-assignment/assets/bg-1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: inset 40px 0px 40px var(--black);
+}
+#main {
+  display: flex;
+  justify-content: space-around;
+}
 #rico-back-button {
   background: transparent;
-  border: 3px solid white;
+  border: 3px solid var(--white);
   border-radius: 5em;
-  color: white;
+  color: var(--white);
   font-weight: 500;
   margin: 8vw;
   padding: 5px;
@@ -105,7 +109,62 @@ body { margin: initial; }
 }
 
 @media screen and (min-width: 920px) {
+  .bg-tile-black {
+    background-image: initial;
+    min-height: 40vh;
+    padding-bottom: 20vh;
+    position: initial;
+    top: initial;
+  }
   #cutout {
     height: var(--cutout-height-laptop);
+  }
+  #gallery {
+    grid-template-columns: 9vw 9vw 9vw 9vw 9vw 9vw;
+    column-gap: 4vw;
+    justify-content: start;
+    padding-left: 8vw;
+  }
+  #gallery > div:hover {
+    background-image: linear-gradient(
+      to bottom left,
+      var(--white),
+      20%,
+      var(--black)
+    );
+    border-radius: .25em;
+  }
+  #gallery > div > div {
+    background-color: var(--black);
+    border-radius: .25em;
+    margin: .25em;
+  }
+  #gallery > div > div > img {
+    border-radius: .25em;
+    margin: .25em;
+    width: 8vw;
+  }
+  #gallery > div > div > img:hover {
+    width: 13vw;
+  }
+  #main {
+    display: flex;
+    justify-content: space-around;
+  }
+  #main > div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  #more-from {
+    font-size: 31px;
+    margin: initial;
+    min-width: 14ch;
+    width: 50%;
+  }
+  #rico-back-button {
+    font-weight: 800;
+    margin: initial;
+    vertical-align: bottom;
   }
 }
