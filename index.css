@@ -84,6 +84,10 @@ body { margin: initial; }
   padding: 5px;
   text-transform: uppercase;
 }
+#main {
+  display: flex;
+  justify-content: space-around;
+}
 #primary-hero {
   background-color: var(--black);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5),
@@ -92,10 +96,6 @@ body { margin: initial; }
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: inset 40px 0px 40px var(--black);
-}
-#main {
-  display: flex;
-  justify-content: space-around;
 }
 #rico-back-button {
   background: transparent;
@@ -112,18 +112,24 @@ body { margin: initial; }
   .bg-tile-black {
     background-image: initial;
     min-height: 40vh;
-    padding-bottom: 20vh;
+    padding-bottom: initial;
     position: initial;
     top: initial;
   }
   #cutout {
     height: var(--cutout-height-laptop);
+    padding-right: initial;
+    z-index: 3;
   }
   #gallery {
-    grid-template-columns: 9vw 9vw 9vw 9vw 9vw 9vw;
+    grid-template-columns: 6vw 6vw 6vw 6vw 6vw 6vw;
     column-gap: 4vw;
     justify-content: start;
-    padding-left: 8vw;
+    padding-left: 2vw;
+    position: relative;
+    z-index: 5;
+    align-items: end;
+    min-height: 20vh;
   }
   #gallery > div:hover {
     background-image: linear-gradient(
@@ -132,20 +138,36 @@ body { margin: initial; }
       20%,
       var(--black)
     );
-    border-radius: .25em;
+    border-radius: .5em;
   }
   #gallery > div > div {
+    background-color: transparent;
+    border-radius: .5em;
+    margin: .5em;
+  }
+  #gallery > div > div:hover {
     background-color: var(--black);
-    border-radius: .25em;
-    margin: .25em;
   }
   #gallery > div > div > img {
-    border-radius: .25em;
-    margin: .25em;
+    border-radius: .5em;
+    margin: .5em;
     width: 8vw;
   }
   #gallery > div > div > img:hover {
-    width: 13vw;
+    width: 9vw;
+  }
+  #hero-header {
+    font-weight: 900;
+    padding-left: initial;
+  }
+  #hero-paragraph {
+    font-size: 16px;
+    font-weight: 500;
+    padding: initial;
+    width: 51ch;
+  }
+  #learn-more-button {
+    margin: initial;
   }
   #main {
     display: flex;
@@ -155,12 +177,17 @@ body { margin: initial; }
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    padding: 5em;
+    width: 50vw;
   }
   #more-from {
     font-size: 31px;
     margin: initial;
-    min-width: 14ch;
-    width: 50%;
+    margin-bottom: 10vh;
+    width: 12ch;
+  }
+  #primary-hero {
+    box-shadow: inset 90px 0px 90px var(--black);
   }
   #rico-back-button {
     font-weight: 800;

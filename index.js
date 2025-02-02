@@ -7,6 +7,8 @@ const CONSTANTS = {
   HERO_PARAGRAPH_ID: 'hero-paragraph',
   LEARN_MORE_BUTTON_ID: 'learn-more-button',
   LEARN_MORE_ANCHOR_ID: 'learn-more-anchor',
+  MAIN_ID: 'main',
+  MAIN_LEFT_ID: 'main-left',
   PRIMARY_HERO_ID: 'primary-hero',
   RICO_BACK_ANCHOR_ID: 'rico-back-anchor',
   RICO_BACK_BUTTON_ID: 'rico-back-button',
@@ -55,7 +57,7 @@ const initAttributes = () => {
 
 const appendBottomPanel = () => {
   if (screen.availWidth > 920) {
-    getElementById(CONSTANTS.PRIMARY_HERO_ID)
+    getElementById(CONSTANTS.MAIN_LEFT_ID)
       .appendChild(getElementById(CONSTANTS.BG_TILE_BLACK));
   }
 };
